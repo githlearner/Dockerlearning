@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Hi There. This is Githin.How is this possible.
+            Hi I have changed some code through Githins branch
           </p>
           <a
             className="App-link"

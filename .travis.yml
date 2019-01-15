@@ -7,3 +7,17 @@ before_install:
 
 script:
   - docker run dockerlearning npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "Dockerlearning"
+  env: "Dockerlearning-env"
+  bucket_name: "elasticbeanstalk-us-east-1-450087107704"
+  bucket_path: "Dockerlearning"
+  on:
+    branch: master
+
+  access_key_id: $awskey
+  secret_access_key:
+    secure: "$awssecret"
